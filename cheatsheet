@@ -4,11 +4,13 @@
 #
 grep -lR "500"
 
+
 # Print the relative file paths, one path
 # per line for all filenames that start with
 # "access.log" in the current directory.
 #
 find -iname "access.log*"
+
 
 # Print all matching lines (without the filename
 # or the file path) in all files under the current
@@ -18,3 +20,4 @@ find -iname "access.log*"
 # you will need to search recursively.
 #
 grep -h 500 $(find . -name 'access.log*')
+
