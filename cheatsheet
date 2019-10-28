@@ -21,3 +21,16 @@ find -iname "access.log*"
 #
 grep -h 500 $(find . -name 'access.log*')
 
+
+# Extract all IP addresses from files
+# that start with "access.log" printing one
+# IP address per line.
+# 
+cat $(find . -name 'access.log*') | awk '{print $1}' 
+
+
+# Delete all of the files in this challenge
+# directory including all subdirectories and
+# their contents.
+# 
+find . -delete
