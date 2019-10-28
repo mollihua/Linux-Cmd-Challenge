@@ -34,3 +34,27 @@ cat $(find . -name 'access.log*') | awk '{print $1}'
 # their contents.
 # 
 find . -delete
+
+
+# Count the number of files in the current
+# working directory. Print the number of
+# files as a single integer.
+# 
+ls -lrt |wc -l
+
+
+# Count the number of files in the current
+# working directory. Print the number of
+# files as a single integer.
+# 
+cat access.log |sort
+
+
+# The file split-me.txt contains a list of
+# numbers separated by a ';' character.
+# Split the numbers on the ';' character,
+# one number per line.
+#
+sed -e 's|;|\n|g' split-me.txt
+
+
